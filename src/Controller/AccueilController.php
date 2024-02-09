@@ -14,13 +14,12 @@ class AccueilController extends AbstractController
     public function index(): Response
     {
         //$nom="Jean-Joseph";
-        /*$age= 17;
-        $nomsStudents= ['jean-joseph','jean-patrick','jean-claude','jean-kévin'];*/
+        /*$age= 17;*/
+        $nomsStudents= ['jean-joseph','jean-patrick','jean-claude','jean-kévin'];
         return $this->render('accueil/index.html.twig', [
             //'controller_name' => 'AccueilController',
            // 'leNom' => $nom
-        /*'lesNoms' =>  $nomsStudents,
-          'age' => $age,*/
+        'lesNoms' =>  $nomsStudents,
         ]);
     }
 }
