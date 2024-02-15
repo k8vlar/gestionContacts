@@ -1,0 +1,23 @@
+
+.homme{
+    color: darkorchid;
+}
+.femme{
+    color: coral;
+}
+.titre{
+    color: blue;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 2em;
+}
+.row{
+  justify-content: center;
+}
+h4{
+    border-bottom: solid 0.5px hsla(0, 0%, 0%, 0.26);
+}
+.descripicture{
+    display: grid;
+    grid-template-columns: 20% 80%;
+}

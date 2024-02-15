@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Listes des Categories{% endblock %}
+{% block body %}
+<div class="titre">Liste des Catégories
+</div>
+<div class="row">
+{% for categorie in lesCategories %}
+        <div class="col-sm-12 col-md-12 col-lg-4 col-xl-3">
+            <div class="card mb-3 container"> 
+                <h4 class="card-title text-center">{{categorie.libelle}}</h4>
+                <img style="height: auto; max-width: 200px; display: block" src="{{categorie.image}}" class="avatar mx-auto my-3" alt="image libellé">
+                <ul class="list-group list-group-flush border: solid 1px black border-radius: 10px;">
+                    <li class="list-group-item text-center">{{categorie.description}}</li>
+                    <li class="list-group-item card-body"> <a href="{{path('ficheCategorie', {'id':categorie.id})}}" class="btn btn-success btn-block text-center w-100">Détails...</a></li>
+                </ul>
+            </div>
+        </div>
+{% endfor %}
+</div>
+
+
+{% endblock %}

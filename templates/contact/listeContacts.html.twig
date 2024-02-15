@@ -17,6 +17,7 @@
 </div>#}
 <div class="row">
     {% for contact in contacts %} 
+   {#{{dump(contacts)}}#}
         <div class="col-sm-12 col-md-12 col-lg-4 col-xl-3">
             <div class="card mb-3 container">
                 <h4 class="card-title text-center">{{contact.nom}} {{contact.prenom}}</h4>
@@ -27,13 +28,12 @@
                     <li class="list-group-item">{{contact.ville}}</li>
                     <li class="list-group-item">{{contact.mail}}</li>
                     <li class="list-group-item">{%if contact.sexe == 0%}
-                    <p style="homme; color: red">homme</p>
+                    <p class="homme">homme</p>
                     {% else %}
-                    <p style="femme; color: blue">femme</p>
+                    <p class="femme">femme</p>
                     {%endif%}</li>
-                    <li class="list-group-item card-body"> <a href="/contact/{{contact.id}}" class="btn btn-success btn-block text-center w-99">Détail ...</a>
+                    <li class="list-group-item card-body"> <a href="{{path('contact', {'id':contact.id})}}" class="btn btn-success btn-block text-center w-100">Détails...</a>
                     </li>
-
                 </ul>
             </div>
         </div>

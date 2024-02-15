@@ -18,7 +18,7 @@ class ContactController extends AbstractController
         #{ $manager = $this->getDoctrine()->getManager();
        #{ $repo = $manager ->getRepository(Contacts::class);
         $contacts = $repo->findAll();
-        
+        //dump($contacts);
         // On récupère le contenu de la page "Contact" en BDD (avec Doctrine)
 
         

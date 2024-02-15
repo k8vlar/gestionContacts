@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Listes des Categories{% endblock %}
+
+{% block body %}
+<div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-4 col-xl-12">
+            <div class="card mb-3 container">
+                <h4 class="card-title text-left border:solid 1px black">{{categorie.libelle}}</h4>
+                <div class="descripicture">
+                <img style="height: auto; max-width: 200px; display: block; border-radius: 100% 100%" src="{{categorie.image}}" class="avatar mx-auto my-2" alt="image libellé">
+                <ul class="list-group list-group-flush border: solid 1px black border-radius: 40px;">
+                    <li class="list-group-item">{{categorie.description}}</li>
+                    <li class="list-group-item card-body"> </li>
+                </ul>
+                </div>
+                
+                <a href="{{path ('categories') }}" class="btn btn-success btn-block text-center w-100">Revenir a la liste de Categorie...</a>
+
+            </div>
+        </div>
+</div>
+{% endblock %}
